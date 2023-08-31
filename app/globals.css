@@ -1,4 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
+html,
+body,
+:root {
+  background-color: black;
+  color-scheme: dark;
+  height: 100%;
+}
+
+.masonry {
+    column-count: 4;
+    column-gap: 1em;
+  
+    @media (max-width: 1200px) {
+      column-count: 5;
+    }
+  
+    @media (max-width: 1000px) {
+      column-count: 2;
+    }
+  
+    @media (max-width: 600px) {
+      column-count: 1;
+    }
+  }
+  
+  .masonry-item {
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
